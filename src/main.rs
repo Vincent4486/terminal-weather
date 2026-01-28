@@ -1,3 +1,7 @@
+pub mod config;
+use config::load_or_create_config;
+
 fn main() {
-    println!("Hello, world!");
+    let config = load_or_create_config();
+    println!("Loaded config: {:?}", config);
 }
